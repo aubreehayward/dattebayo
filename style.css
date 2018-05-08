@@ -38,7 +38,7 @@ a:hover {
 }
 
 a {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 800;
   margin: 5px;
   padding: 5px;
@@ -108,9 +108,18 @@ header,
 #Experience,
 .section-title-contact {
   display: flex;
-  justify-content: flex-start;
   margin-top: 15px;
   margin-bottom: 15px;
+}
+
+#About,
+#Experience {
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+}
+
+#Skills {
+  justify-content: flex-start;
 }
 
 #Skills {
@@ -134,17 +143,25 @@ header,
 
 .main-text-body-about,
 .main-text-body-experience {
-  font-family: 'Nanum Gothic', sans-serif;
+  font-family: 'Work Sans', sans-serif;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 15px;
+  margin: 0px 90px;
   padding: 10px;
   justify-content: space-evenly;
 }
 
 em {
+  font-style: italic;
   font-weight: bolder;
+}
+
+.experience-information {
+  display: flex;
+  font-size: 16px;
+  font-weight: bolder;
+  margin-top: 25px;
+  margin-left: 30px;
 }
 
 h1 {
@@ -207,26 +224,25 @@ meter::-webkit-meter-optimum-value {
 .experience-box-two,
 .experience-box-three {
   display: flex;
-  flex-direction: row;
-  align-self: flex-start;
+  flex-direction: column;
+  align-items: center;
   flex-grow: 3;
 }
 
 .extra-special {
   font-size: 16px;
-  color: #A03800;
-  text-shadow: 0.5px 0.5px #F4E9D9;
   font-size: 24px;
+    color: #2F3A51;
+    text-shadow: 2px 2px lightyellow;
 }
 
 .experience-box {
   display: flex;
-  align-items: stretch;
+  flex-direction: row;
+  color: #A03800;
+  text-shadow: 0.5px 0.5px #F4E9D9;
 }
 
-p {
-  margin-left: 10px;
-}
 
 #contact-body {
   display: flex;
@@ -335,7 +351,8 @@ button:hover,
 
 @media screen and (max-width: 450px){
   .main-text-body-experience {
-    display: contents;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -378,3 +395,4 @@ button:hover,
   -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
 }
+
